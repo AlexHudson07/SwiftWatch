@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--image-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller backgroundImage="image" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SwiftWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Click" id="6ll-wC-WYC">
+                            <connections>
+                                <action selector="onClickButtonPressed" destination="AgC-eL-Hgc" id="CdC-F9-NGc"/>
+                            </connections>
+                        </button>
+                        <label width="100" height="51" alignment="left" text="default text" numberOfLines="2" id="hEj-r1-l4s">
+                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <switch width="1" alignment="left" title="Switch" id="mVQ-IH-QP9">
+                            <connections>
+                                <action selector="onSwitchSwiped:" destination="AgC-eL-Hgc" id="Zi9-KV-Gqj"/>
+                            </connections>
+                        </switch>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="byF-7Y-b7S">
+                            <connections>
+                                <action selector="onSliderSwiped:" destination="AgC-eL-Hgc" id="KBu-If-IWE"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="clickButton" destination="6ll-wC-WYC" id="noh-eM-1RG"/>
+                        <outlet property="label" destination="hEj-r1-l4s" id="sR4-Lj-edW"/>
+                        <outlet property="theSlider" destination="byF-7Y-b7S" id="P17-iq-lga"/>
+                        <outlet property="theSwitch" destination="mVQ-IH-QP9" id="967-Ff-789"/>
+                        <segue destination="pnF-os-YBZ" kind="relationship" relationship="nextPage" id="YXJ-Ct-lZ0"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="569" y="682.5"/>
+        </scene>
+        <!--image-->
+        <scene sceneID="MYz-Ca-noL">
+            <objects>
+                <controller backgroundImage="image" id="pnF-os-YBZ"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="670"/>
+        </scene>
+    </scenes>
+</document>
